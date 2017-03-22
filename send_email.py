@@ -1,12 +1,9 @@
 from flask import Flask, url_for, render_template, redirect, current_app
 from email.mime.text import MIMEText
 import smtplib
-#from flask import current_app as app
+
 
 def send_email(firstName, lastName, email, subject, comments):
-	#from_email="aristotle.gizmo@gmail.com"
-	#from_password = "26r-Ncg-s6d-Wat"
-	#to_email='codegizmo@protonmail.com' 
 	from_email = current_app.config['FROM_EMAIL']
 	from_password = current_app.config['FROM_PASSWORD']
 	to_email = current_app.config['TO_EMAIL']

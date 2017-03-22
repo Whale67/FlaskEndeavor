@@ -60,22 +60,19 @@ def formJournal():
 
 @app.route('/send_form', methods=['POST'])
 def send_form():
-	if request.method == 'POST':
-		form = ContactForm(request.form)
-		if form.validate():
-			firstName = request.form['firstName']
-			lastName = request.form['lastName']
-			email = request.form['email']
-			subject = request.form['subject']
-			comments = request.form['comments']
-			send_email(firstName, lastName, email, subject, comments)
-			return render_template('thankyou.html')	
-		flash('Something appears to have been filled out incorrectly. Please try again.')	
-		return render_template('contact.html', form=form)	
-	return render_template('error.html')	
+	form = ContactForm(request.form)
+	if form.validate():
+		firstName = request.form['firstName']
+		lastName = request.form['lastName']
+		email = request.form['email']
+		subject = request.form['subject']
+		comments = request.form['comments']
+		send_email(firstName, lastName, email, subject, comments)
+		return render_template('thankyou.html')	
+	flash('Something appears to have been filled out incorrectly. Please try again.')	
+	return render_template('contact.html', form=form)	
+		
 			
-
-
 
 
 if __name__== '__main__':
