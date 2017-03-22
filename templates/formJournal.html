@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit="no">
+	
+	<title>How To: Forms</title>
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/journal_style.css">	
+   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row" id="nav">
+
+  <ul id="menu">  
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('index') }}" class="transition">
+    <strong><span>code</span>Gizmo</strong>
+    </a></li>
+    </div>
+    
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('journal') }}" class="selected transition">Journal</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('portfolio') }}" class="transition">Portfolio</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('contact') }}" class="transition">Contact</a></li>
+    </div>
+
+  </ul>
+ </div>
+</div>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div id="header">
+
+<!--
+  <div class="headertext">
+    <strong><span>code</span>Gizmo</strong>
+  </div>
+-->
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <ul class="social-icons">
+     <li>
+       <a href="https://github.com/Whale67" target="_blank" title="Opens in separate tab!"><img src="../static/images/Octocat.png" /></a>
+     </li>
+     <li>
+       <a href="https://gab.ai/Whale67" target="_blank"><img src="../static/images/frog4.png"></a>
+     </li>
+    </ul>   
+  </div>
+ </div>
+</div>
+
+<div class="container-fluid" id="wrapper">
+ <div class="row">
+  <div class="col-xs-12">
+   <div class="monthJournal">
+ 	  <h2>Submit and Collect Form Data on a Static Website</h2> <br>
+ 		   <p>  Did you create a static website? Are you stumped on how to gather form data on a static website? This post will share with you a simple way to add a form to your website. Enter Formspree! </p>
+
+       <p>To quote the Formspree website <blockquote>Just send your form to our URL and we'll forward it to your email. No PHP, Javascript or sign up required — perfect for static sites! </blockquote> </p>
+
+       <p>That is all there is to it. You simply write out your HTML form, add a action, name, value, etc. and Viola! You have a form that submits and sends the information to your email.</p>
+
+       <p> Lets walk through it. First I create my form. You can add as many input fields as you need.</p>
+
+       <p class="toText">
+          &lt;form&gt;<br />
+            &lt;input type=“text” name=“name” required&gt;<br />
+            &lt;input type=“email” name=“email” required&gt;<br />
+          &lt;/form&gt;
+       </p>
+
+       <p>Then we go and change the action attribute. This way when the form is submitted we will get the information sent to our email.</p>
+
+       <p class="toText">
+           &lt;form action=“https://formspree.io/youremailgoeshere@whatever.com&gt;<br />
+             &lt;input type=“text” required&gt;<br />
+             &lt;input type=“email” required&gt;<br />
+           &lt;/form&gt;
+       </p>
+
+       <p>Next you need to go in and add a <strong> name </strong> attribute to each input type (whether input, select or textarea). </p>
+
+       <p class="toText">
+         &lt;form action=“https://formspree.io/youremailgoeshere@whatever.com&gt;<br />
+             &lt;input type=“text” name="name" required&gt;<br />
+             &lt;input type=“email” name="email" required&gt;<br />
+           &lt;/form&gt;
+       </p>
+
+
+       <p>Finally, fill out the form and submit it. *Note:: you will have to resubmit this form every time you change servers. It may be a good idea to check it from time to time. I switched servers three times in one day and I had to resend the form three times. </p>
+
+       <p>Now you have a nice functioning form which is free to use for up to 1000 emails per month. Formspree also has some other nice features, such as setting up you own ‘thank you for submitting my form’ page, receiving plain text emails of form submissions, avoiding spam and using AJAX. These extra features are under the advanced section which you come to after the initial setup section. </p>
+
+       <p>For more information and a complete walkthrough head over to https://formspree.io</p>
+
+  </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="scrollToTop" onclick="scrollToTop();return false;">
+    <a href="onclick">
+      <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+    </a>
+  </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="footer">&copy; Copyright 2016 codeGizmo.com All Rights Reserved</div>
+	
+  </div>
+ </div>
+</div>
+
+</div> <!--container fluid closing div from start of first monthJournal-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>   
+  <script src="../static/bootstrap/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="../static/js/journal.js"></script>
+
+</body>
+</html>

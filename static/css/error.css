@@ -1,0 +1,54 @@
+
+body, html {  
+    background: #bdcccb;
+    background: url('../images/error.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%; 
+	width: 100%;
+	font-family: 'Poiret One', Helvetica, Arial;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+}
+
+
+.jumbotron {
+    margin-top: 20px;
+    height: 500px;
+    background: url('../images/error.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #000;
+    filter: opacity(80%);
+}
+
+a {
+	color: #800000;
+}
+
+a:hover {
+	color: #800000;
+}
+
+.message {
+	float: right;
+	width: 60%;
+	padding: 50px;
+	color: #000; 
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);                
+}
+
+@media screen and (max-width: 767px) {
+    .message {
+         background-color: rgba(255,255,255,0.5);
+         text-shadow: none;
+    }
+}

@@ -1,0 +1,159 @@
+body, html {    
+    background: #bdcccb;
+    background: url('../images/computerflowers.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%; 
+	width: 100%;
+	font-family: 'Poiret One', Helvetica, Arial;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    box-shadow: inset 0px 0px 40px 40px rgba(0,0,0,0.9);
+    animation: myfadeInAnimation 1s; 
+    filter: contrast(100%);
+}
+
+@media screen and (max-width: 767px) {
+    body, html {
+         overflow-y: visible;
+    }
+}
+
+@keyframe myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*========== Title Content =======*/
+#content {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);                        
+}
+
+#content h1 {
+    color: #d1d1d1;
+    text-shadow: 1px 4px 3px #000, 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px #fff;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    filter: drop-shadow(16px 16px 20px white);
+    font-size: 150px;
+} 
+
+@media screen and (max-width: 767px) {
+    #content h1 {
+        font-size: 25vw;
+        font-size: 70px;
+    }
+}
+
+@media screen (min-width: 1200px) and (max-width: 1920px) {
+    #content h1 {
+        font-size: 2000%;
+    }
+}
+
+#content span {
+    font-size: 0.5em;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+#content h3 {
+    color: #fff;
+    filter: contrast(200%);
+}
+
+hr {
+    width: 60%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/*=============== Social Icons =============*/
+.social-icons {
+    margin: 20px;
+}
+
+.social-icons li {
+	list-style-type: none;
+	display: inline;
+    padding: 20px;
+    float: right;
+}    
+
+.social-icons a {
+	text-decoration: none;
+}
+
+.social-icons img { 
+    width: 30px;
+    height: 30px;
+}
+/*
+.social-icons li a:hover img {
+    background-color: #d0d0d0;
+    border-radius: 50%;
+    opacity: 0.6;
+} */
+
+/*============== Navigation ==========*/
+#nav {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;   
+    filter: drop-shadow(16px 16px 20px white);
+}
+
+#menu a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 10px 20px;
+    border: 1px solid white; 
+    background: rgba(0, 0, 0, 0.4);
+    margin: 10px;
+}
+
+#menu li:hover a {
+    color: #fff;
+    background-color: rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 767px) {
+    #menu a {
+         margin: 10px;
+         display: block;
+    }
+}
+
+
+

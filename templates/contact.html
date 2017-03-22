@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit="no">
+    
+    <title>Contact</title>
+
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">    
+ <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css">
+   <link rel="stylesheet" type="text/css" href="../static/css/contact_style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">    
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row" id="nav">
+
+  <ul id="menu">  
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('index') }}" class="transition">
+    <strong><span>code</span>Gizmo</strong>
+    </a></li>
+    </div>
+    
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('journal')}}" class="transition">Journal</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('portfolio') }}" class="transition">Portfolio</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('contact') }}" class="selected transition">Contact</a></li>
+    </div>
+
+  </ul>
+ </div>
+</div>  
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div id="header">
+
+<!--
+  <div class="headertext">
+    <strong><span>code</span>Gizmo</strong>
+  </div>
+-->
+</div>
+</div>
+</div>
+
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         <div class="alert" role="alert">
+            {{ message }}
+      </div>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<form action="{{ url_for('send_form')}}"
+      method="POST" id="contactForm">
+    {{ form.hidden_tag() }}  
+ <div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div class="introduction">
+     <h1>CONNECT &nbsp; <span class="divide">||</span> &nbsp; CONTACT</h1>
+     <hr>
+   <div class="container-fluid">   
+    <div class="row">
+     <div class="col-md-12 col-xs-12">
+
+    <ul class="social-icons">
+      <li>
+        <a href="https://github.com/Whale67" target="_blank"><img src="../static/images/Octocat.png" /></a>
+      </li>
+      <li>
+       <a href="https://gab.ai/Whale67" target="_blank"><img src="../static/images/frog4.png"></a>
+      </li>     
+    </ul>
+     </div>
+    </div>
+   </div>
+  
+  </div>
+ </div>
+</div>  
+</div>
+
+<div class="formContainer">
+ <div class="row">
+   <div class="form-group col-sm-6 {% if form.firstName.errors %} has-error {% endif %}">
+     {{form.firstName.label(class="control-label")}}
+    <!--  <input type="text" class="form-control input-lg" id="firstName" placeholder="First Name" name="firstName" required> -->
+     {{ form.firstName(placeholder="First Name", class="form-control input-lg", id="firstName")}}
+     
+        {{ form.firstName.errors[0] }} 
+    </div>
+
+
+    <div class="form-group col-sm-6 {% if form.lastName.errors %} has-error {% endif %}">
+    <!--  <label for="lastName" class="control-label">Last Name</label>
+        <input type="text" class="form-control input-lg" id="lastName" placeholder="Last Name" name="lastName" required> -->
+        {{form.lastName.label(class="control-label")}}
+     {{ form.lastName(placeholder="Last Name", class="form-control input-lg", id="lastName")}}
+     
+        {{ form.lastName.errors[0] }}
+    </div>
+  </div>  
+
+  <div class="row">
+   <div class="form-group col-sm-6 {% if form.email.errors %} has-error {% endif %}">
+   <!-- <label for="email" class="control-label">Email Address</label>
+     <input type="email" class="form-control input-lg" id="email" placeholder="Your Email Address" name="_replyto" required> -->
+     {{form.email.label(class="control-label")}}
+     {{ form.email(placeholder="Email Address", class="form-control input-lg", id="email")}}
+     
+        {{ form.email.errors[0] }}
+    </div>
+
+    <div class="form-group col-sm-6 {% if form.subject.errors %} has-error {% endif %}">
+   <!--   <label for="subject" class="control-label">Subject</label>
+        <input type="text" class="form-control input-lg" id="subject" placeholder="Email Subject" name="_subject" required>  -->
+        {{form.subject.label(class="control-label")}}
+     {{ form.subject(placeholder="Subject", class="form-control input-lg", id="subject")}}
+     
+        {{ form.subject.errors[0] }}
+        </div>
+       </div>  
+
+  <div class="row">
+   <div class="form-group col-xs-12 {% if form.comments.errors %} has-error {% endif %}">
+   <!-- <label for="message" class="control-label">Message or Comments</label>
+     <textarea class="form-control" id="comments" placeholder="Your message..." name="comments" required></textarea>  -->
+     {{form.comments.label(class="control-label")}}
+     {{ form.comments(placeholder="Your message...", class="form-control input-lg", id="comments")}}
+     
+        {{ form.comments.errors[0] }}
+    </div>
+   </div>      
+   <br>
+  <div class="row">
+   <div class="form-group col-xs-12">
+
+       <button type="submit" value="Send" name="send" class="btn btn-secondary btn-lg btn-block"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+
+   </div>
+  </div>   
+ </div>
+</form>
+
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-lg-12 col-xs-12">
+   <div class="footer navbar-bottom">
+&copy; Copyright 2016 codeGizmo.com All Rights Reserved
+  </div>
+ </div>
+</div>     
+</div>
+
+
+<!-- SCRIPT FILES -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>  
+  <script src="../static/bootstrap/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+      <script type="text/javascript" src="../static/js/contact.js"></script>
+
+</body>
+</html>

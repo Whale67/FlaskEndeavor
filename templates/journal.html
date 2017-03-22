@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit="no">
+	
+	<title>Journal</title>
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/journal_style.css">	
+   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row" id="nav">
+
+  <ul id="menu">  
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('index') }}" class="transition">
+    <strong><span>code</span>Gizmo</strong>
+    </a></li>
+    </div>
+    
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('journal') }}" class="selected transition">Journal</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('portfolio') }}" class="transition">Portfolio</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('contact') }}" class="transition">Contact</a></li>
+    </div>
+
+  </ul>
+ </div>
+</div>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div id="header">
+
+<!--
+  <div class="headertext">
+    <strong><span>code</span>Gizmo</strong>
+  </div>
+-->
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <ul class="social-icons">
+     <li>
+       <a href="https://github.com/Whale67" target="_blank" title="Opens in separate tab!"><img src="../static/images/Octocat.png" /></a>
+     </li>
+     <li>
+       <a href="https://gab.ai/Whale67" target="_blank"><img src="../static/images/frog4.png"></a>
+     </li>
+    </ul>   
+</div>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div class="monthJournal">
+ 	  <h2>Journal Posts</h2>
+      <p>My own take on a few topics and things I have learned.</p>
+        <ul class="learned1">
+          <li><a href="{{ url_for('formJournal') }}">How To: Submit and Collect Form Data on a Static Website</a></li>
+        </ul> 			
+  </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="monthJournal">
+   <h2>Resources</h2>
+    <p>Articles and tips to help with web development and design. Each resource is a link that opens in a separate tab.</p>
+     <ul class="learned1">
+        <li>Drop Down Menu. I found this simple tutorial from W3 Schools for a drop down navigation menu here <a href="http://www.w3schools.com/css/css_dropdowns.asp" target="_blank">W3 Schools</a>.</li>
+        <li>Add a backdrop filter to a image, especially if the image contains any text you want to highlight. This article shows you how at <a href="https://webkit.org/blog/3632/introducing-backdrop-filters/" target="_blank">Webkit.org</a>.</li> 
+     </ul> 
+  </div>
+ </div>
+</div>   
+
+ 
+<div class="row">
+ <div class="col-xs-12">
+  <div class="resources">
+   <h2>Learning Resources</h2>
+        <p>
+        These are some of the resources I used to learn. Each resource is a link that opens in a separate tab.</p>
+ 
+    <ul>
+ 		<li>
+ 			<a href="https://www.codecademy.com" target="_blank">Codeacademy</a>
+ 		</li>   
+ 		<li>  
+ 			<a href="https://www.khanacademy.org" target="_blank">Khan Academy</a>
+ 		</li>
+ 		<li>
+ 			<a href="http://dash.generalassemb.ly" target="_blank">Dash by General Assembly</a>
+ 		</li>
+ 		<li>
+ 			<a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+ 		</li>
+ 		<li>
+ 			<a href="https://www.youtube.com/channel/UC-JQzTHQrVA8j-tamvy66fw" target="_blank">HTML and CSS Tutorial for Beginners Youtube series</a>
+    </li> 	
+    <li>
+      <a href="https://www.udemy.com" target="_blank">Udemy.com</a>
+    </li>   
+    <li>
+      <a href="https://www.youtube.com/user/thenewboston" target="_blank">TheNewBoston Youtube Programming Tutorials, including Python</a>
+    </li>   
+    <li>
+      <a href="http://learntocodewith.me/blog/" target="_blank">Learn to Code with Me, blog and resources for beginners </a>
+    </li>   
+    <li>
+      <a href="http://stackoverflow.com" target="_blank">Stack Overflow, ask a question and get a answer or search through other people's questions to find your answer </a>
+    </li>   
+ 	</ul>		
+	
+  </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="scrollToTop" onclick="scrollToTop();return false;">
+    <a href="onclick">
+      <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+    </a>
+  </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="contactMe">
+   <a href="{{ url_for('contact')}}">
+    <h2>Need more information? Have a question? Just like to send email? I love getting email! <br><br> 
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    </h2>      
+   </a>  
+  </div>
+ </div>
+</div>  
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="footer">
+    <p class="foot">&copy; Copyright 2016 codeGizmo.com All Rights Reserved<p>
+     <p class="foot">In case you missed the big colored box above you can contact me <a href="{{ url_for('contact') }}">here</a></p>
+  </div>
+ </div>
+</div>
+
+</div> <!--container fluid closing div from start of first monthJournal-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>   
+  <script src="../static/bootstrap/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="../static/js/journal.js"></script>
+
+</body>
+</html>

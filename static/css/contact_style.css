@@ -1,0 +1,237 @@
+.container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	font-family: 'Poiret One', Helvetica, cursive;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	animation: myfadeInAnimation 1s;
+}
+
+@keyframe myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* ==============================HEADER==============================*/
+#header {	
+	width: 100%;
+	height: 325px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	background: url('../images/askmorequestions.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover;
+	color: #fff;
+	margin: 0;
+}	
+/*
+.headertext {
+	color: #fff;
+	text-align: right;
+	font-size: 100px;
+	line-height: 450px;
+    background-color: #fff;
+    color: transparent;	
+    text-shadow: 0px 2px 3px #000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+span {
+	font-size: 50px;
+}
+
+strong {
+	margin: 75px;
+}
+*/
+span {
+	font-size: 20px;
+}
+/*===============================NAVIGATION========================*/
+
+#nav {
+/*	background-color: #000; */
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	font-weight: bolder;
+	margin: 0;
+}
+
+#menu {
+/*	position: fixed; */
+	width: 100%;
+	text-align: center;
+}
+
+#menu li {
+	display: inline;
+	padding-right: 50px;	
+}
+
+#menu a {
+	text-decoration: none;
+	list-style-type: none;
+    color: #000;
+	font-size: 30px;
+	line-height: 50px;
+	padding: 5px;	
+}
+
+#menu li:hover a {
+    color: #0ba8a3;
+	padding: 5px; 
+	line-height: 50px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+a.selected {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+/*===========================SOCIAL ICONS=================*/
+
+.social-icons {
+	text-align: center;
+	margin: auto;
+	padding: 0;
+}
+
+.social-icons li {
+	display: inline-block;
+
+}
+
+.social-icons a {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 10px;
+}
+
+.social-icons img {
+	height: 30px;	
+}
+/*
+.social-icons li a:hover img {
+	background-color: rgba(0,0,0,0.15);
+	border-radius: 50%;
+} */
+
+/*============================= FORM BODY TEXT===================*/
+
+.introduction {
+	text-align: center;	
+	margin: auto;
+	width: 100%;
+	margin-bottom: 70px;
+	margin-top: 40px;
+}
+ 
+.introduction h1 {
+	font-family: 'Poiret One', Helvetica, cursive;
+    font-size: 60px;
+    font-weight: lighter;
+    color: #000;
+}
+
+@media screen and (max-width: 767px) {
+    .introduction h1 {
+        font-size: 40px !important;
+    }
+}
+
+.divide {
+	font-weight: lighter;
+	font-size: 60px;
+}
+
+hr {
+    width: 60%;
+    border-color: #000;
+}
+/*====================== FORM ==========================*/
+form {
+    width: 70%;
+/*	background: rgb(0,128,128); */
+    border: 1px solid black;
+	height: auto;
+	color: #000;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	margin-top: 100px;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.btn {
+	width: 60%;
+	margin: 0 auto;
+	background-color: rgb(0,128,128);
+	color: #000;
+	filter: drop-shadow(4px 4px 5px black);
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+.btn:active {
+	filter: drop-shadow(4px 4px 5px white);
+}
+
+.form-control {
+	background-color: rgb(0,128,128);
+	filter: drop-shadow(4px 4px 5px black);
+	color: black;
+}
+
+textarea#comments.form-control {
+	height: 200px;
+	font-size: 18px;
+}
+
+.fa {
+	color: #d0d0d0;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 5px;
+}
+/*==============================FOOTER======================*/
+
+.footer {
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	font-size: 15px;
+	color: #000;
+	line-height: 70px;
+}
+
+/*======================== FLASH MESSAGE ==================*/
+.alert {
+	background-color: rgb(0,128,128);
+	margin: 0 auto;
+	width: 60%;
+	margin-top: 20px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+

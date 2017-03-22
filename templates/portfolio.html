@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit="no">
+  
+  <title>Portfolio</title>
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/portfolio_style.css">  
+   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row" id="nav">
+
+  <ul id="menu">  
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('index') }}" class="transition">
+    <strong><span>code</span>Gizmo</strong>
+    </a></li>
+    </div>
+    
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('journal') }}" class="transition">Journal</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('portfolio') }}" class="selected transition">Portfolio</a></li>
+    </div>
+
+    <div class="col-sm-3 col-xs-12">
+    <li><a href="{{ url_for('contact') }}" class="transition">Contact</a></li>
+    </div>
+
+  </ul>
+ </div>
+</div>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div id="header">
+
+<!--
+  <div class="headertext">
+    <strong><span>code</span>Gizmo</strong>
+  </div>
+-->
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <ul class="social-icons">
+     <li>
+       <a href="https://github.com/Whale67" target="_blank" title="Opens in separate tab!"><img src="../static/images/Octocat.png" /></a>
+     </li>
+     <li>
+       <a href="https://gab.ai/Whale67" target="_blank"><img src="../static/images/frog4.png"></a>
+     </li>
+    </ul>   
+  </div>
+ </div>
+</div>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div class="introduction">
+     <h1>PORTFOLIO</h1>
+      <p>My name is Naomi and I am a Web Developer. So if you are thinking that "Web Developer" doesn't tell you anything specific you are right. Don't worry. I have a great place to explain a few things if you click <a href="{{ url_for('about') }}">here</a>. Otherwise... <br><br> Thanks for checking out my Portfolio. It is constantly growing so be sure to check back often! <br>
+      You will find here some of my static websites, dynamic websites, web applications and a few random things that don't really fit into any category. Lets check it out!</p>
+   </div>  
+  </div>
+ </div>  
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="projects">
+      <h2>Websites</h2> <br>
+        <ul>
+          <li><a href="http://dermatologist-request-13248.bitballoon.com" target="_blank">J.R.R. Tolkien Website</a><br>A unpublished website. It is a work in progress. Experimenting with layout and dropdown menu on the <em>Books</em> page. Some links do not work. Opens in a separate tab.</li> <br>
+          
+          <li><a target="_blank" href="http://writer-selina-16308.bitballoon.com">A splash page</a><br>Opens in a separate tab.</li> <br>
+
+          <li><a href="http://promoter-norman-16103.bitballoon.com/cart" target="_blank">The Dress Shop</a><br>One page from my "The Dress Shop" website. I played around with CSS to create a detailed footer, sticky social media bar and empty shopping cart. Opens in a separate tab.</li> <br>
+
+        </ul>  
+    </div>
+   </div>
+  </div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="projects2">
+      <h2>Web Applications</h2> <br>
+        <ul>
+          <li><a href="http://carpenter-bat-13765.bitballoon.com" target="_blank">A Todo List</a><br>A todo list I made in a Udemy code along. I tweaked it a bit, added some different style and prompt to gather user's name. Currently a static application. Opens in a separate tab.</li><br>
+        </ul>  
+  </div>
+ </div>
+</div> 
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="projects2">
+      <h2>Random Things I Made</h2> <br>
+        <ul>
+          <li><a href="http://boxer-briefing-17288.bitballoon.com">Guess the Pet</a><br> A if/else alert and prompt game. My first Javascript attempt.</li> <br>
+        </ul>  
+  </div>
+ </div>
+</div> 
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="scrollToTop" onclick="scrollToTop();return false;">
+     <a href="onclick">
+       <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+     </a>
+  </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="contactMe">
+   <a href="{{ url_for('contact') }}">
+    <h2>Need more information? Have a question? Just like sending email? I love getting email! <br><br> 
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    </h2>      
+   </a>  
+  </div>
+ </div>
+</div>  
+
+<div class="row">
+ <div class="col-xs-12">
+  <div class="footer">
+   <p class="foot">&copy; Copyright 2016 codeGizmo.com All Rights Reserved</p>
+    <p class="foot">In case you missed the big colored box above you can contact me <a href="{{ url_for('contact') }}">here</a></p>
+  </div>   
+ </div>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>  
+  
+<script src="../static/bootstrap/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="../static/js/journal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+.container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	font-family: 'Poiret One', Helvetica, cursive;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	animation: myfadeInAnimation 1s;
+}
+
+@keyframe myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* ==============================HEADER==============================*/
+#header {	
+	width: 100%;
+	height: 325px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	background: url('../images/thankyou.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover;
+	color: #fff;
+	margin: 0;
+}	
+
+span {
+	font-size: 20px;
+}
+/*===============================NAVIGATION========================*/
+
+#nav {
+/*	background-color: #000; */
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	font-weight: bolder;
+	margin: 0;
+}
+
+#menu {
+/*	position: fixed; */
+	width: 100%;
+	text-align: center;
+}
+
+#menu li {
+	display: inline;
+	padding-right: 50px;	
+}
+
+#menu a {
+	text-decoration: none;
+	list-style-type: none;
+    color: #000;
+	font-size: 30px;
+	line-height: 50px;
+	padding: 0;	
+}
+
+#menu li:hover a {
+    color: #004600;
+	padding: 5px; 
+	line-height: 50px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+/*================ Content =================*/
+.content {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	margin-top: 50px;
+}
+.content h1 {
+	padding: 50px 50px 10px 5px;
+	margin: 0;
+	padding: 10px;
+	line-height: 50px;
+
+}
+/*===========================SOCIAL ICONS=================*/
+
+.social-icons {
+	text-align: center;
+	margin: auto;
+	padding: 0;
+}
+
+.social-icons li {
+	display: inline-block;
+
+}
+
+.social-icons a {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 10px;
+}
+
+.social-icons img {
+	height: 50px;
+	
+}
+.social-icons li a:hover img {
+	background-color: rgba(0,0,0,0.15);
+	border-radius: 50%;
+}
+
+hr {
+	border-color: #000;
+	width: 80%;
+}
+
+/*==============================FOOTER======================*/
+
+.footer {
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	font-size: 15px;
+	color: #000;
+	line-height: 70px;
+}
+
