@@ -62,11 +62,11 @@ def formJournal():
 def send_form():
 	form = ContactForm(request.form)
 	if form.validate():
-		firstName = request.form['firstName']
-		lastName = request.form['lastName']
-		email = request.form['email']
-		subject = request.form['subject']
-		comments = request.form['comments']
+		firstName = form.firstName.data
+		lastName = form.lastName.data
+		email = form.email.data
+		subject = form.subject.data
+		comments = form.comments.data
 		send_email(firstName, lastName, email, subject, comments)
 		return render_template('thankyou.html')	
 	flash('Something appears to have been filled out incorrectly. Please try again.')	
