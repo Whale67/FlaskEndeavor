@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, url_for, flash
 import os
 from send_email import send_email
 
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import TextField, validators, HiddenField
 from wtforms import TextAreaField
 from wtforms.validators import Required, EqualTo, Optional
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 
-class ContactForm(Form):
+class ContactForm(FlaskForm):
    firstName = TextField('First Name', validators=[
    			   Required('Hi! I am Naomi and you are?'),
    			   ])
@@ -59,7 +59,7 @@ def formJournal():
 
 @app.route('/send_form', methods=['POST'])
 def send_form():
-	form = ContactForm(request.form)
+	form = ContactForm()
 	if form.validate():
 		firstName = form.firstName.data
 		lastName = form.lastName.data
