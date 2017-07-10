@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for, flash
 import os
+from os import environ
 from send_email import send_email
-
 from flask_wtf import FlaskForm
 from wtforms import TextField, validators, HiddenField
 from wtforms import TextAreaField
@@ -11,12 +11,12 @@ from wtforms.validators import Length, Email
 
 app = Flask(__name__, instance_relative_config=True)
 
-app.config.from_envvar('DEBUG')
-app.config.from_envvar('CSRF_ENABLED')
-app.config.from_envvar('SECRET_KEY')
-app.config.from_envvar('FROM_EMAIL')
-app.config.from_envvar('FROM_PASSWORD')
-app.config.from_envvar('TO_EMAIL')
+environ.get('DEBUG')
+environ.get('CSRF_ENABLED')
+environ.get('SECRET_KEY')
+environ.get('FROM_EMAIL')
+environ.get('FROM_PASSWORD')
+environ.get('TO_EMAIL')
 
 class ContactForm(FlaskForm):
    firstName = TextField('First Name', validators=[
