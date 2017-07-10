@@ -11,12 +11,12 @@ from wtforms.validators import Length, Email
 
 app = Flask(__name__, instance_relative_config=True)
 
-DEBUG = os.environ.get('DEBUG')
-CSRF_ENABLED = os.environ.get('CSRF_ENABLED')
-SECRET_KEY = os.environ.get('SECRET_KEY')
-FROM_EMAIL = os.environ.get('FROM_EMAIL')
-FROM_PASSWORD = os.environ.get('FROM_PASSWORD')
-TO_EMAIL = os.environ.get('TO_EMAIL')
+DEBUG= app.config.from_envvar('DEBUG', silent=True)
+CSRF_ENABLED = app.config.from_envvar('CSRF_ENABLED', silent=True)
+SECRET_KEY = app.config.from_envvar('SECRET_KEY', silent=True)
+FROM_EMAIL = app.config.from_envvar('FROM_EMAIL', silent=True)
+FROM_PASSWORD = app.config.from_envvar('FROM_PASSWORD', silent=True)
+TO_EMAIL = app.config.from_envvar('TO_EMAIL', silent=True)
 
 class ContactForm(FlaskForm):
    firstName = TextField('First Name', validators=[
