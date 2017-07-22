@@ -50,11 +50,17 @@ def contact():
 def about():
 	return render_template('about.html')	
 
+@app.route('/privacy')
+def privacy():
+	return render_template('privacy.html')
 
 @app.route('/formJournal')
 def formJournal():
 	return render_template('formJournal.html')	
 
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('error.html'), 500
 
 @app.route('/send_form', methods=['POST'])
 def send_form():

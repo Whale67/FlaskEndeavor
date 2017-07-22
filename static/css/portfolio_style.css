@@ -190,6 +190,11 @@ span {
 	color: orange;
 }
 
+/*======================= SPACER =================*/
+.spacer {
+	margin: 30px;
+}
+
 /*======================== Contact Div ===========*/
 .contactMe {
 	width: 80%;
@@ -242,4 +247,17 @@ i.fa.fa-envelope-o {
 .foot a {
     color: #ed8931;
     text-decoration: none;
+}
+
+/*============================== IHOVER ===========================*/
+.ihover {
+	margin-top: 20px;
+}
+
+div.ih-item.circle.effect3.left_to_right {
+	margin: 0 auto;
+}
+
+div.ih-item.circle.effect3.right_to_left {
+	margin: 0 auto;
 }
