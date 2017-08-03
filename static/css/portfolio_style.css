@@ -100,6 +100,11 @@ span {
 	padding: 10px;
 }
 
+.social-icons i { 
+    width: 30px;
+    height: 30px;
+}
+
 .fa.fa-linkedin-square.social-icons, .fa.fa-github.social-icons {
     margin: 0;
     font-size: 28px;
