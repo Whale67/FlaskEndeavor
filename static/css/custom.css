@@ -87,6 +87,8 @@ hr {
 /*=============== Social Icons =============*/
 .social-icons {
     margin: 20px;
+    font-size: 28px;
+    color: black;
 }
 
 .social-icons li {
@@ -94,15 +96,22 @@ hr {
 	display: inline;
     padding: 20px;
     float: right;
+    width: 70px;
+    height: 80px;
 }    
 
 .social-icons a {
 	text-decoration: none;
 }
 
-.social-icons img { 
+.social-icons i { 
     width: 30px;
     height: 30px;
+}
+
+.fa.fa-linkedin-square.social-icons, .fa.fa-github.social-icons {
+    margin: 0;
+    color: #000;
 }
 /*
 .social-icons li a:hover img {

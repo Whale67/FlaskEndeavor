@@ -9,9 +9,12 @@
 
 <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">    
  <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/about.css"> 
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">   
-     <link rel="shortcut icon" href="#"/> 
+  <link href="../static/css/ihover.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+   <link rel="stylesheet" type="text/css" href="../static/css/about.css"> 
+    <link rel="stylesheet" href="../static/css/divider-text-middle.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">  
+      <link rel="shortcut icon" href="#"/> 
  
 
 </head> 
@@ -77,24 +80,98 @@
      <p>My focus is on minimalist, sleek design. I create websites I would like to visit and interact with.</p>
 
      <p>Some of my technical skills...
-        <ul>
-         <li><strong>Frameworks:</strong> Bootstrap | Flask | Jquery</li>
-         <li><strong>Database:</strong> MongoDB | SQL</li>
-         <li><strong>Operating Systems:</strong> Mac | Linux</li>
-        </ul>
-     </p>  
 
-     <p>Some of my additional skills...
-        <ul>
-          <li>I can configure and deploy sites using cloud based services</li>
-          <li>Project collaboration with senior developers</li>
-          <li>Reliable | Creative </li>
-          <li>I can deliver your project on time</li>  
-        </ul>
-     </p>
+  <div class="row skills">
+      <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>MARKUP</span></h2></div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-html5-plain-wordmark soft-effect"></i>
+       </div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-css3-plain-wordmark soft-effect"></i>
+       </div> 
+    </div>
 
-     <p>You can learn about me on <a href="https://linkedin.com/in/naomielisha">Linkedin</a>. Head over to my <a href="{{ url_for('portfolio') }}">Portfolio</a> to see what I can do for you. Have a idea of what you want? I can help. Send me a <a href="{{ url_for('contact') }}">message</a> with your specifics and I will get back to you.</p>
+  <div class="row skills">
+      <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>LANGUAGES</span></h2></div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-javascript-plain glass-effect"></i>
+       </div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-python-plain-wordmark glass-effect"></i>
+       </div> 
+    </div>
 
+  <div class="row skills">
+      <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>FRAMEWORKS</span></h2></div>
+       <div class="col-xs-4 text-center">
+        <i class="devicon-bootstrap-plain-wordmark glass-effect"></i>
+       </div>
+       <div class="col-xs-4 text-center">
+       <i class="devicon-jquery-plain-wordmark glass-effect"></i>
+       </div> 
+       <div class="col-xs-4 text-center glass-effect">
+       <img src="../static/images/flask.png">
+       <p><strong>Flask</strong></p>
+       </div> 
+    </div>
+
+  <div class="row skills">
+      <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>DATABASES</span></h2></div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-mongodb-plain-wordmark glass-effect"></i>
+       </div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-postgresql-plain-wordmark glass-effect"></i>
+       </div> 
+  </div>
+  
+    <div class="row skills">
+      <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>OPERATING SYSTEMS</span></h2></div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-apple-original glass-effect"></i>
+        <p><strong>MAC OSX</strong></p>
+       </div>
+       <div class="col-xs-6 text-center">
+        <i class="devicon-linux-plain glass-effect"></i>
+        <p><strong>Linux</strong></p>
+       </div> 
+    </div>
+
+    <div class="row skills">
+      <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>A FEW EXTRA TECH SKILLS</span></h2></div>
+       <div class="col-xs-4 text-center">
+        <i class="devicon-github-plain glass-effect"></i>
+       </div>
+       <div class="col-xs-4 text-center">
+        <i class="devicon-git-plain glass-effect"></i>
+        <p><strong>Git</strong></p>
+       </div> 
+       <div class="col-xs-4 text-center">
+        <i class="devicon-heroku-plain-wordmark glass-effect"></i>
+       </div>
+    </div>
+
+    <div class="row skills extra-skills">
+      <div class="col-xs-6 text-center">
+        <i class="devicon-gimp-plain glass-effect"></i>
+      </div>
+      <div class="col-xs-6 text-center">
+        <i class="devicon-wordpress-plain glass-effect"></i>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="skill-divider" style="text-align:center;">
+       <h2 class="divider-style"><span>Check out my <a href="{{ url_for('portfolio') }}">Portfolio</a> to see what I can do for you</span></h2></div>
+
+   </div>
   </div>
  </div>
 </div>
@@ -104,10 +181,10 @@
 
     <ul class="social-icons">
       <li>
-        <a href="https://github.com/Whale67" target="_blank"><img src="../static/images/Octocat.png" /></a>
+        <a href="https://github.com/Whale67" target="_blank"><i class="fa fa-github social-icons" aria-hidden="true"></i></a>
       </li>
       <li>
-       <a href="https://gab.ai/Whale67" target="_blank"><img src="../static/images/frog4.png"></a>
+       <a href="https://linkedin.com/in/naomielisha" target="_blank"><i class="fa fa-linkedin-square social-icons" aria-hidden="true"></i></a>
       </li>     
     </ul>
 

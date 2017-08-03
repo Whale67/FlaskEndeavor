@@ -113,10 +113,12 @@ span {
 	padding: 10px;
 }
 
-.social-icons img {
-	height: 50px;
-	
+.fa.fa-linkedin-square.social-icons, .fa.fa-github.social-icons {
+    margin: 0;
+    font-size: 28px;
+    color: #000;
 }
+
 .social-icons li a:hover img {
 	background-color: rgba(0,0,0,0.15);
 	border-radius: 50%;

@@ -85,7 +85,7 @@ span {
 .social-icons {
 	text-align: center;
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	margin-top: 30px;
 	padding: 0;
 }
@@ -100,8 +100,10 @@ span {
 	padding: 10px;
 }
 
-.social-icons img {
-	height: 30px;	
+.fa.fa-linkedin-square.social-icons, .fa.fa-github.social-icons {
+    margin: 0;
+    font-size: 28px;
+    color: #000;
 }
 /*
 .social-icons li a:hover img {
